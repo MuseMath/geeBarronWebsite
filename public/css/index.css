@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #EAEBED;
+}
+
+.intro {
+    position: absolute;
+    top: 25%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.intro h1{
+    font-family: "Arial Black";
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+}
