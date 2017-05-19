@@ -1,0 +1,25 @@
+extends layout
+block css/scripts
+  link(rel='stylesheet', href='/css/flipperBox.css')
+  link(rel='stylesheet', href='/css/hoverEffect.css')
+  script(src="/js/index.js")
+
+block content
+    .row
+        .main
+            .bgimg
+            .text "There is no such thing as a painless lesson, they just don't exist. Sacrifices are necessary. You can't gain anything without losing something first; although if you can endure that pain and walk away from it, you'll find that you now have a heart strong enough to overcome any obstacle. Yeah, a heart made full metal."
+                span.author
+                    p - Edward Elric
+
+            #flipperBox
+              #msg
+                | I
+                br
+                | LOVE
+              #box
+                #side1 HTML
+                #side2 CSS
+                #side3 JQUERY
+                #side4 ☻
+    include ./partials/navBar
