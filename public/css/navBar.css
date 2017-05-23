@@ -16,6 +16,10 @@ nav ul a {
     color: #EAEBED;
 }
 
+nav a{
+    color: #D1495B;
+}
+
 .right{
     position: absolute;
     left: 50%;
