@@ -1,6 +1,7 @@
 nav {
     background-color: transparent;
     box-shadow: none;
+    height: 0;
 }
 
 nav .brand-logo {

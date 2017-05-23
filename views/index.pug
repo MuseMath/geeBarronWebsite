@@ -1,17 +1,39 @@
 extends layout
 block css/scripts
-	link(rel='stylesheet', href='/css/flipperBox.css')
-	link(rel='stylesheet', href='/css/hoverEffect.css')
-	link(rel='stylesheet', href='/css/index.css')
-	script(src="/js/index.js")
+    link(rel='stylesheet', href='/css/index.css')
+    script(src="/js/index.js")
 
 block content
-	include ./partials/navBar
+    include ./partials/navBar
 
-	section#home
-		.container
-			.col.l12
-				.intro
-					h1 CREATOR
-					h1 THINKER
-					h1 NERD
+    #home
+        .container
+            .row
+                .col.l12
+                    svg#gb(viewbox='0 0 960 300')
+                        symbol#s-gb
+                            text(text-anchor='middle', x='50%', y='80%') Gee Barron
+                        g.g-ants
+                            use.text(xlink:href='#s-gb')
+                            use.text(xlink:href='#s-gb')
+                            use.text(xlink:href='#s-gb')
+                            use.text(xlink:href='#s-gb')
+                            use.text(xlink:href='#s-gb')
+
+            .row
+                .col.l12.s12
+                    .Iam
+                        b
+                            .innerIam
+                                | CREATOR
+                                br
+                                |     THINKER
+                                br
+                                |     NERD
+                                br
+                                |     BEAUTIFUL
+
+            .row
+                .col.l3
+
+

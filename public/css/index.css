@@ -1,19 +1,165 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
 body {
     margin: 0;
     padding: 0;
     background-color: #EAEBED;
+    font-family: Arial;
 }
 
-.intro {
-    position: absolute;
-    top: 25%;
-    transform: translateX(-50%);
-    left: 50%;
+html, body{
+    height: 100%;
+    font-weight: 800;
 }
 
-.intro h1{
-    font-family: "Arial Black";
-    font-size: 100px;
-    font-weight: bold;
+#home {
+    background-image: url("/img/fun.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+svg {
+    display: block;
+    font: 13em 'Montserrat';
+    width: 750px;
+    height: 100%;
+}
+
+#gb {
+    width: 950px;
     text-align: center;
+    margin: 10% auto 0 auto;
 }
+
+.text {
+    fill: none;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke 6s infinite linear;
+    animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n + 1) {
+    stroke: #F2385A;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+    stroke: #F5A503;
+    -webkit-animation-delay: -2.4s;
+    animation-delay: -2.4s;
+}
+.text:nth-child(5n + 3) {
+    stroke: #E9F1DF;
+    -webkit-animation-delay: -3.6s;
+    animation-delay: -3.6s;
+}
+.text:nth-child(5n + 4) {
+    stroke: #56D9CD;
+    -webkit-animation-delay: -4.8s;
+    animation-delay: -4.8s;
+}
+.text:nth-child(5n + 5) {
+    stroke: #3AA1BF;
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+
+.Iam {
+    padding: 2em 5em;
+    font: normal 60px/50px Montserrat, sans-serif;
+    color: #999;
+}
+.Iam p {
+    height: 50px;
+    float: left;
+    margin-right: 0.3em;
+}
+.Iam b {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    top: -70px;
+    left: 28%;
+}
+.Iam .innerIam {
+    display: inline-block;
+    color: #EAEBED;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+
+
+    /*animation*/
+    -webkit-animation:move 5s;
+    -moz-animation:move 5s;
+    -ms-animation:move 5s;
+    -o-animation:move 5s;
+    animation:move 5s;
+    /*animation-iteration-count*/
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    /*animation-delay*/
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+    -o-animation-delay:1s;
+    animation-delay:1s;
+}
+@keyframes move{
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+
+@-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}}
