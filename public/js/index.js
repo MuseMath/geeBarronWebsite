@@ -4,60 +4,63 @@
 $(document).ready(function() {
     $(".button-collapse").sideNav();
 
-    var words = document.getElementsByClassName('word');
-    var wordArray = [];
-    var currentWord = 0;
+    $(window).scroll(function () {
+        var wScroll = $(this).scrollTop();
+        console.log(wScroll); //1430 for About page
 
-    words[currentWord].style.opacity = 1;
-    for (var i = 0; i < words.length; i++) {
-        splitLetters(words[i]);
-    }
+        $("p[aria-label='CodePen']").css({
+            'transform' : 'translate(0px, ' +wScroll/1.35+'px)'
+        });
 
-    function changeWord() {
-        var cw = wordArray[currentWord];
-        var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
-        for (var i = 0; i < cw.length; i++) {
-            animateLetterOut(cw, i);
+        $(".Iam").css({
+            'transform' : 'translate(0px, ' +wScroll/1.7+'px)'
+        });
+
+        // if ($(window).scrollTop() > 0) {
+        //     $('nav').css('top', $(window).scrollTop());
+        // }
+
+        // if ($(window).scrollTop() >= 1000) {
+        //     $('nav').addClass("sticky");
+        // }else {
+        //     $('nav').removeClass("sticky");
+        // }
+
+        if(wScroll > $('#portfolio').offset().top - ($(window).height()/1.8)) {
+            $('#portfolio .square').each(function (i) {
+                setTimeout(function () {
+                    $('#portfolio .square').eq(i).addClass('is-showing');
+                }, 150 * (i+1));
+            });
         }
 
-        for (var i = 0; i < nw.length; i++) {
-            nw[i].className = 'letter behind';
-            nw[0].parentElement.style.opacity = 1;
-            animateLetterIn(nw, i);
+        if(wScroll > $('#blog').offset().top - ($(window).height()/1.8)){
+
+            var offset = Math.min(0, wScroll - $('#blog').offset().top + $(window).height()-800);
+
+            $('.post1').css({
+                'transform' : 'translate('+ offset +'px, '+  Math.abs(offset * 0.4) +'px)'
+            });
+
+            $('.post3').css({
+                'transform' : 'translate('+ Math.abs(offset) +'px, '+  Math.abs(offset * 0.4) +'px)'
+            });
         }
 
-        currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
-    }
+    });
 
-    function animateLetterOut(cw, i) {
-        setTimeout(function() {
-            cw[i].className = 'letter out';
-        }, i*80);
-    }
-
-    function animateLetterIn(nw, i) {
-        setTimeout(function() {
-            nw[i].className = 'letter in';
-        }, 340+(i*80));
-    }
-
-    function splitLetters(word) {
-        var content = word.innerHTML;
-        word.innerHTML = '';
-        var letters = [];
-        for (var i = 0; i < content.length; i++) {
-            var letter = document.createElement('span');
-            letter.className = 'letter';
-            letter.innerHTML = content.charAt(i);
-            word.appendChild(letter);
-            letters.push(letter);
+    $("a").click(function(){
+        if($(this).attr('href') === "#about" || $(this).attr('href') === "#portfolio") {
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top + 100
+            }, 1000);
+            return false;
+        }else{
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 1000);
+            return false;
         }
-
-        wordArray.push(letters);
-    }
-
-    changeWord();
-    setInterval(changeWord, 4000);
-
+    });
 
 });

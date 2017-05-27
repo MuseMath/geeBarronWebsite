@@ -1,10 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:800');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600');
 
 body {
     margin: 0;
     padding: 0;
     background-color: #EAEBED;
-    font-family: Arial;
+    font-family: Raleway;
 }
 
 html, body{
@@ -13,6 +14,7 @@ html, body{
 }
 
 #home {
+    position: relative;
     background-image: url("/img/fun.jpg");
     background-attachment: fixed;
     background-size: cover;
@@ -20,16 +22,19 @@ html, body{
     height: 100%;
     width: 100%;
     display: table;
+    overflow: hidden;
 }
 
-p {
-    text-align: center;
+p[aria-label='CodePen'] {
+    position: absolute;
+    top: 0%;
     color: #EAEBED;
     font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
     font-size: 6.4em;
     font-weight: 700;
+    overflow: hidden;
 }
-p span {
+p[aria-label='CodePen'] span {
     display: inline-block;
     position: relative;
     -webkit-transform-style: preserve-3d;
@@ -38,8 +43,8 @@ p span {
     perspective: 500;
     -webkit-font-smoothing: antialiased;
 }
-p span::before,
-p span::after {
+p[aria-label='CodePen'] span::before,
+p[aria-label='CodePen'] span::after {
     display: none;
     position: absolute;
     top: 0;
@@ -50,70 +55,68 @@ p span::after {
     transition: all ease-out 0.3s;
     content: attr(data-text);
 }
-p span::before {
+p[aria-label='CodePen'] span::before {
     z-index: 1;
     color: rgba(0,0,0,0.2);
     -webkit-transform: scale(1.1, 1) skew(0deg, 20deg);
     transform: scale(1.1, 1) skew(0deg, 20deg);
 }
-p span::after {
+p[aria-label='CodePen'] span::after {
     z-index: 2;
     color: #dc6c44;
     text-shadow: -1px 0 1px #dc6c44, 1px 0 1px rgba(0,0,0,0.8);
     -webkit-transform: rotateY(-40deg);
     transform: rotateY(-40deg);
 }
-p span:hover::before {
+p[aria-label='CodePen'] span:hover::before {
     -webkit-transform: scale(1.1, 1) skew(0deg, 5deg);
     transform: scale(1.1, 1) skew(0deg, 5deg);
 }
-p span:hover::after {
+p[aria-label='CodePen'] span:hover::after {
     -webkit-transform: rotateY(-10deg);
     transform: rotateY(-10deg);
 }
-p span + span {
+p[aria-label='CodePen'] span + span {
     margin-left: 0.3em;
 }
 
-p span::before,
-p span::after {
+p[aria-label='CodePen'] span::before,
+p[aria-label='CodePen'] span::after {
     display: block;
 }
 
 @media (min-width: 1920px) {
-    p {
+    p[aria-label='CodePen'] {
         font-size: 7.4em;
     }
 }
 
 @media (min-width: 1280px) {
-    p {
+    p[aria-label='CodePen'] {
         font-size: 6.4em;
     }
 }
 
 @media (min-width: 1024px) {
-    p {
+    p[aria-label='CodePen'] {
         font-size: 5.3em;
     }
 }
 
 @media (min-width: 1600px) {
-    p {
-        font-size: 8.1em;
+    p[aria-label='CodePen'] {
+        font-size: 10em;
     }
 }
 
 .Iam {
-    padding: 2em 5em;
+    position: absolute;
+    top: 55%;
+    padding: 0 5em;
     font: normal 60px/50px Montserrat, sans-serif;
     color: #999;
 }
-.Iam p {
-    height: 50px;
-    float: left;
-    margin-right: 0.3em;
-}
+
 .Iam b {
     float: left;
     overflow: hidden;
@@ -185,4 +188,266 @@ p span::after {
     40% { top: -100px; }
     60% { top: -150px; }
     80% { top: -200px; }
-}}
+}
+
+/************************** BRING IT *************************************/
+
+#bringIt{
+    width: 90%;
+    height: 85%;
+    border-bottom: 2px solid #dc6c44;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10%;
+    color: #272727;
+    margin-bottom: 11%;
+}
+
+.headers {
+    font-size: 200%;
+    font-weight: 600;
+    margin-top: 10%;
+}
+
+.bringItContent {
+    line-height: 2;
+    font-weight: 500;
+}
+
+.circle {
+    background-color: transparent;
+    border: 2px solid #272727;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 25%;
+    transition: all 300ms ease-in-out;
+}
+
+i {
+    top: 25%;
+    position: absolute;
+    left: 25%;
+    transition: all 500ms ease-in-out;
+}
+
+#bringIt .col:hover .circle {
+     background-color: #dc6c44;
+ }
+
+#bringIt .col:hover i {
+    color: #EAEBED;
+}
+
+#bringIt .topCirlce {
+    position: absolute;
+    top: 197%;
+    left: 47%;
+}
+
+/************************** ABOUT *************************************/
+
+#about {
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    border-bottom: 2px solid #dc6c44;
+}
+
+.large-window{
+    height: 640px;
+    width: 640px;
+    background-image: url("/img/1.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 50%;
+    margin-top: 10%;
+}
+
+.aboutMe {
+    position: absolute;
+}
+
+#about h1{
+    margin-right: 25%;
+    margin-bottom: 5%;
+}
+
+.content {
+    width: 73%;
+    line-height: 2;
+}
+
+.quote {
+    width: 100%;
+    font-size: 165%;
+    font-family: Raleway;
+    font-weight: 600;
+    color: #3b3a42;
+    text-align: center;
+}
+
+.author {
+    margin-left: 2%;
+}
+
+.mystuff {
+    font-size: 135%;
+    font-family: Raleway;
+    font-weight: 500;
+}
+
+#about .topCirlce {
+    position: absolute;
+    top: 100%;
+    left: 47%;
+}
+
+/************************** BLOG *************************************/
+
+#blog {
+    height: 93%;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+.blogArea {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#blog h1{
+    margin-bottom: 3%;
+}
+
+.blogContent {
+    padding-top: 5%;
+    top: 150%;
+    overflow: hidden;
+}
+
+.posts {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15%;
+    border: 1px solid #e1e1e1;
+    padding: 20px 20px 0;
+    background: #EAEBED;
+}
+
+.post1{
+    transform: translate(200px, 20px);
+}
+
+.post2 {
+    z-index: 2;
+}
+
+.post3{
+    transform: translate(-200px, 20px);
+}
+
+.posts img{
+    width: 300px;
+    height: auto;
+}
+
+.diamond {
+    float: left;
+    background-image: url("/img/1.png");
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg) translateY(10px);
+}
+
+.blogContent p{
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: 2;
+    text-align: left;
+}
+
+.blogArea .title {
+    margin-left: 160%;
+}
+
+/************************** PORTFOLIO *************************************/
+
+#portfolio {
+    margin: 0 auto;
+    height: 100%;
+    width: 90%;
+    display: table;
+    position: relative;
+    border-bottom: 2px solid #dc6c44;
+}
+
+.square {
+    float: left;
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10%;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.is-showing {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+a[href="#home"]:hover {
+    color: #EAEBED;
+    text-decoration: none;
+}
+
+.topCirlce{
+    height: 100px;
+    width: 100px;
+    background-color: #dc6c44;
+    border-radius: 50%;
+    margin-top: -2.3%;
+    margin-bottom: -2.5%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 700ms ease-in-out;
+    z-index: 999999999;
+    left: 47%;
+    position: absolute;
+}
+
+.topCirlce h6 {
+    font-size: 250%;
+    text-align: center;
+    margin-top: 30%;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #EAEBED;
+    transition: all 500ms ease-in-out;
+    z-index: 999999999;
+}
+
+.topCirlce:hover{
+    background-color: #EAEBED;
+}
+
+.topCirlce:hover h6{
+    color: #dc6c44;
+}
+

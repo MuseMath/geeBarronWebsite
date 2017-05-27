@@ -1,12 +1,20 @@
 nav {
+    position: relative;
     background-color: transparent;
     box-shadow: none;
-    height: 0;
+    height: 0%;
+    z-index: 99999;
+    transition: background-color 200ms ease-in-out, height 200ms ease-in-out;
+}
+
+.sticky {
+    background-color: #dc6c44;
+    height: 7%;
+    top: 0;
 }
 
 nav .brand-logo {
     font-family: "Arial Black";
-    /*left: 10%;*/
     font-size: 3.1rem;
     color: #EAEBED;
 }
@@ -17,7 +25,7 @@ nav ul a {
 }
 
 nav a{
-    color: #D1495B;
+    color: #EAEBED;
 }
 
 .right{
@@ -43,7 +51,7 @@ a::after {
      height: 1px;
      visibility: hidden;
      transform: scaleX(0);
-     background-color: #D1495B;
+     background-color: #dc6c44;
      transition: all .3s ease;
  }
 
