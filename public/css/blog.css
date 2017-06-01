@@ -1,0 +1,55 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:800");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EAEBED;
+  font-family: Raleway; }
+
+#blogHome {
+  position: relative;
+  background-image: url("/img/fun.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+  display: table; }
+
+#topPosts {
+  margin: 0 auto;
+  padding-top: 10%; }
+  #topPosts .date {
+    color: #EAEBED;
+    text-align: center;
+    height: 50%;
+    width: 70%;
+    background-color: #272727; }
+    #topPosts .date h5 {
+      padding-top: 15%; }
+  #topPosts .title {
+    text-align: center; }
+    #topPosts .title hr {
+      background-color: #dc6c44;
+      height: 2px; }
+    #topPosts .title h1 {
+      font-size: 3em;
+      font-weight: 600; }
+  #topPosts .content {
+    padding-top: 5%;
+    font-size: 1.3em;
+    font-weight: 400; }
+  #topPosts .readMore {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #dc6c44;
+    border: 1px solid #dc6c44;
+    margin-left: 2%;
+    margin-bottom: 15%;
+    transition: all 0.3s ease-in-out; }
+    #topPosts .readMore:hover {
+      background-color: #dc6c44;
+      color: #EAEBED;
+      text-decoration: none; }
+
+/*# sourceMappingURL=blog.css.map */

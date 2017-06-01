@@ -1,0 +1,74 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:800')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600')
+
+$orange: #dc6c44
+$white: #EAEBED
+$black: #272727
+
+body
+  margin: 0
+  padding: 0
+  background-color: #EAEBED
+  font-family: Raleway
+
+
+#blogHome
+  position: relative
+  background:
+    image: url("/img/fun.jpg")
+    size: cover
+    position: center
+    attachment: fixed
+  height: 50vh
+  width: 100%
+  display: table
+
+#topPosts
+  margin: 0 auto
+  padding:
+    top: 10%
+
+  .date
+    color: $white
+    text-align: center
+    height: 50%
+    width: 70%
+    background-color: $black
+
+    h5
+      padding-top: 15%
+
+  .title
+    text-align: center
+    hr
+      background:
+        color: $orange
+      height: 2px
+
+    h1
+      font:
+        size: 3em
+        weight: 600
+
+  .content
+    padding:
+      top: 5%
+    font:
+      size: 1.3em
+      weight: 400
+
+  .readMore
+    font:
+      size: .8em
+      weight: 600
+    color: $orange
+    border: 1px solid $orange
+    margin:
+      left: 2%
+      bottom: 15%
+    transition: all .3s ease-in-out
+
+    &:hover
+      background-color: $orange
+      color: $white
+      text-decoration: none
