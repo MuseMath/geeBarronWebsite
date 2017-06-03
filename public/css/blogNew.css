@@ -1,0 +1,51 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:800");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EAEBED;
+  font-family: Raleway;
+  overflow: hidden; }
+
+#blogNew nav {
+  height: 70px;
+  background-color: #272727; }
+
+#sideNav {
+  padding-left: 0; }
+  #sideNav .col.l2 {
+    padding-left: 0; }
+  #sideNav .blogActions {
+    height: 96vh;
+    width: 100%;
+    background-color: #272727; }
+  #sideNav .listing {
+    padding-top: 100%;
+    text-align: center; }
+    #sideNav .listing ul {
+      margin: 0 0; }
+      #sideNav .listing ul li {
+        font-size: 1.8em;
+        font-weight: 600; }
+        #sideNav .listing ul li button {
+          border: none;
+          background: none;
+          color: #EAEBED;
+          transition: color 0.2s ease-in-out; }
+          #sideNav .listing ul li button:hover {
+            color: #dc6c44; }
+          #sideNav .listing ul li button::after {
+            background-color: transparent; }
+  #sideNav .displayArea {
+    margin-top: 1%;
+    height: 90vh;
+    width: 100%;
+    border: 2px solid #dc6c44; }
+
+#newPost h1 {
+  text-align: center;
+  margin: 5% 0;
+  color: #272727;
+  font-weight: 600; }
+
+/*# sourceMappingURL=blogNew.css.map */

@@ -1,0 +1,14 @@
+template(v-if='showaffiliate')
+    #newPost
+        h1 New Affiliate
+        .row
+            form.col.s12
+                .row
+                    .input-field.col.s12
+                        input#affiliate.validate(type='text')
+                        label(for='affiliate') Affiliate Link
+                .row
+                    .input-field.col.s12
+                        textarea#textarea1.materialize-textarea
+                        label(for='textarea1') Textarea
+

@@ -1,0 +1,60 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:800')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600')
+
+$orange: #dc6c44
+$white: #EAEBED
+$black: #272727
+
+body
+  margin: 0
+  padding: 0
+  background-color: #EAEBED
+  font-family: Raleway
+  overflow: hidden
+
+#blogNew
+  nav
+    height: 70px
+    background-color: $black
+
+#sideNav
+  padding-left: 0
+
+  .col.l2
+    padding-left: 0
+
+  .blogActions
+    height: 96vh
+    width: 100%
+    background-color: $black
+
+  .listing
+    padding-top: 100%
+    text-align: center
+    ul
+      margin: 0 0
+      li
+        font-size: 1.8em
+        font-weight: 600
+        button
+          border: none
+          background: none
+          color: $white
+          transition: color .2s ease-in-out
+          &:hover
+            color: $orange
+          &::after
+            background-color: transparent
+
+  .displayArea
+    margin-top: 1%
+    height: 90vh
+    width: 100%
+    border: 2px solid $orange
+
+#newPost
+  h1
+    text-align: center
+    margin: 5% 0
+    color: $black
+    font-weight: 600

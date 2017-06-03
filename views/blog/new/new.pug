@@ -1,0 +1,30 @@
+extends ../../layout
+block css/scripts
+    link(rel='stylesheet', href='/css/blogNew.css')
+    script(src="/js/vue.js")
+    script(src="/js/blogNew.js")
+
+block content
+    #blogNew
+        include ../../partials/navBar
+
+        .row
+            #app
+                #sideNav
+                    .col.l2
+                        .blogActions
+                            .listing
+                                ul
+                                    li
+                                        button(@click="display(newpost), shownew") New Post
+                                    li
+                                        button(@click="display(affiliate)") Add Affiliate
+                                    li
+                                        button(@click="display(posts)") List Posts
+
+                    .col.l10
+                            .displayArea
+                                include newPost
+                                include newAffiliate
+
+

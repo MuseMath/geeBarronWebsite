@@ -1,0 +1,26 @@
+template(v-if='shownew')
+    #newPost
+        h1 New Post
+        .row
+            form#newPostForm.col.s12
+                .row
+                    .input-field.col.s12
+                        input#title.validate(type='text')
+                        label(for='title') Post Title
+                .file-field.input-field
+                    .btn
+                        span Image
+                        input#image(type='file')
+                    .file-path-wrapper
+                        input.file-path.validate(type='text')
+
+                .row
+                    .input-field.col.s12
+                        textarea#postContent.materialize-textarea
+                        label(for='postContent') Textarea
+                .row
+                    button.btn.waves-effect.waves-light(type='submit', name='action')
+                        | Submit
+                        i.material-icons.right send
+
+

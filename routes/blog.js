@@ -4,11 +4,29 @@ var models = require("../models");
 var url  = require('url'),
     fs   = require('fs');
 
-/* GET NEW POST page. */
+/* GET BLOG page. */
 router.get('/', function(req, res) {
     var url_parts = url.parse(req.url);
     models.Posts.all().then(function(postList) {
-        res.render('blog');
+        res.render('blog/blog');
+    });
+});
+
+/**************** NEW POST ****************************************************************/
+
+/* GET NEW page. */
+router.get('/new', function(req, res) {
+    var url_parts = url.parse(req.url);
+    models.Posts.all().then(function(postList) {
+        res.render('blog/new/new');
+    });
+});
+
+/* POST NEW page. */
+router.post('/new', function(req, res) {
+    console.log(req.body);
+    res.json({
+        success: true
     });
 });
 
