@@ -47,10 +47,15 @@ $(document).ready(function() {
             image: $image.val(),
             postContent: $postContent.val()
         };
+        var formData = new FormData($(this)[0]);
         $.ajax({
             type: "POST",
             url: '/blog/new',
-            data: newPost,
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
             success: function (newPost){
                 console.log(newPost);
             }

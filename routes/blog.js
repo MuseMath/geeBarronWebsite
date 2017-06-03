@@ -3,6 +3,17 @@ var router = express.Router();
 var models = require("../models");
 var url  = require('url'),
     fs   = require('fs');
+var multer = require('multer');
+
+var storage = multer.diskStorage({
+    destination: function(req, file, callback) {
+        callback(null, 'public/img/post')
+    },
+    filename: function(req, file, callback) {
+        callback(null, file.originalname)
+    }
+});
+
 
 /* GET BLOG page. */
 router.get('/', function(req, res) {
@@ -23,11 +34,12 @@ router.get('/new', function(req, res) {
 });
 
 /* POST NEW page. */
-router.post('/new', function(req, res) {
-    console.log(req.body);
-    res.json({
-        success: true
-    });
+router.post('/new', function (req, res) {
+    var upload = multer({storage: storage}).single('image');
+    upload(req, res, function(err) {
+        console.log(req.file);
+        res.json({success: true});
+    })
 });
 
 /* GET UPDATE POST page. */
@@ -92,3 +104,7 @@ router.delete('/delete-post', function(req, res) {
 
 
 module.exports = router;
+
+function checkMagicNumbers(magic) {
+    if (magic == MAGIC_NUMBERS.jpg || magic == MAGIC_NUMBERS.jpg1 || magic == MAGIC_NUMBERS.png || magic == MAGIC_NUMBERS.gif) return true
+}
