@@ -1,112 +1,127 @@
 extends layout
 block css/scripts
-    link(rel='stylesheet', href='/css/index.css')
-    script(src="/js/index.js")
+	link(rel='stylesheet', href='/css/index.css')
+	script(src="/js/index.js")
 
 block content
-    include ./partials/navBar
+	include ./partials/navBar
 
-    #home
-        .container
-            .row
-                .col.l12.s12
-                    p(aria-label="CodePen")
-                        span(data-text="G") G
-                        span(data-text="E") E
-                        span(data-text="E") E
-                        span(data-text="")
-                        span(data-text="B") B
-                        span(data-text="A") A
-                        span(data-text="R") R
-                        span(data-text="R") R
-                        span(data-text="O") O
-                        span(data-text="N") N
-                    .Iam
-                        b
-                            .innerIam
-                                | CREATOR
-                                br
-                                |     THINKER
-                                br
-                                |     NERD
-                                br
-                                |     BEAUTIFUL
-    .container
-        #bringIt
-            .row
-                h1 What I Bring To The Table
-                .col.l4.s12
-                    .circle
-                        i.fa.fa-paint-brush.fa-3x(aria-hidden='true')
-                    .headers Web Design
-                    .bringItContent
-                        p Web design is more than a pretty website, it’s about making something useful. It’s about creating something that your audience will undoubtably understand. Web design is taking an idea that manifests in your head or on paper and turning it into a beautiful and completely functional experience. It should look great, yes, but it should work great too.
-                .col.l4.s12
-                    .circle
-                        i.fa.fa-wrench.fa-3x(aria-hidden='true')
-                    .headers WEB DEVELOPMENT
-                    .bringItContent
-                        p Web design is more than a pretty website, it’s about making something useful. It’s about creating something that your audience will undoubtably understand. Web design is taking an idea that manifests in your head or on paper and turning it into a beautiful and completely functional experience. It should look great, yes, but it should work great too.
-                .col.l4.s12
-                    .circle
-                        i.fa.fa-line-chart.fa-3x(aria-hidden='true')
-                    .headers UX STRATEGY
-                    .bringItContent
-                        p Web design is more than a pretty website, it’s about making something useful. It’s about creating something that your audience will undoubtably understand. Web design is taking an idea that manifests in your head or on paper and turning it into a beautiful and completely functional experience. It should look great, yes, but it should work great too.
+	.topCirlce
+		h6.text Menu
+		.dropdownContent
+			ul
+				li
+					a(href='/') HOME
+				li
+					a(href='#portfolio') PORTFOLIO
+				li
+					a(href='#about') ABOUT
+				li
+					a(href='/blog') BLOG
 
 
-    .container
-        #portfolio
-            .row
-                h1 PORTFOLIO
-                .col.l4.s6
-                    .square
-                .col.l4.s6
-                    .square
-                .col.l4.s6
-                    .square
-                .col.l4.s6
-                    .square
-                .col.l4.s6
-                    .square
+
+	#home
+		.container
+			.row
+				.col.l12.s12
+					p(aria-label="CodePen")
+						span(data-text="G") G
+						span(data-text="E") E
+						span(data-text="E") E
+						span(data-text="")
+						span(data-text="B") B
+						span(data-text="A") A
+						span(data-text="R") R
+						span(data-text="R") R
+						span(data-text="O") O
+						span(data-text="N") N
+					.Iam
+						b
+							.innerIam
+								| CREATOR
+								br
+								|     THINKER
+								br
+								|     NERD
+								br
+								|     BEAUTIFUL
+	.container
+		#bringIt
+			.row
+				h1 What I Bring To The Table
+				.col.l4.s12
+					.circle
+						i.fa.fa-paint-brush.fa-3x(aria-hidden='true')
+					.headers Web Design
+					.bringItContent
+						p Web design is more than a pretty website, it’s about making something useful. It’s about creating something that your audience will undoubtably understand. Web design is taking an idea that manifests in your head or on paper and turning it into a beautiful and completely functional experience. It should look great, yes, but it should work great too.
+				.col.l4.s12
+					.circle
+						i.fa.fa-wrench.fa-3x(aria-hidden='true')
+					.headers WEB DEVELOPMENT
+					.bringItContent
+						p Web development is a foreign subject to many, but it can be simplified in these terms: a beautiful design is broken down into certain elements and within those elements, website users are able to interact and engage in a set of actions (hover, click, read, submit a request, etc.). A perfectly developed website is one that works beautifully for both front-end users and those who manage the content of the website.
+				.col.l4.s12
+					.circle
+						i.fa.fa-line-chart.fa-3x(aria-hidden='true')
+					.headers UX STRATEGY
+					.bringItContent
+						p UX strategy is simply a plan to execute a desired user experience. Whether the strategy is taken to in-depth measures, such as wireframing individual pages, or the strategy is simply mapped out through a content outline and a few discussions, it is absolutely important that the UX strategy be in place before spending both time and money on design and development.
 
 
-    .container
-        #about
-            .row
-                .col.l12.s12
-                    .aboutMe
-                        h1 ABOUT
-                        .content
-                            .quote
-                                p "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."
-                                    span.author - Ralph Waldo Emerson
-                            p.mystuff Hi my name is Gamaliel Barron, Gee for short and also for those who do not want to butcher my name. I am a Full Stack Engineer, and a student for life.
-                                | Puzzles and solving complicated problems are my muse. To creating the architecture all the way to user experience (UX), there is nothing better then to let your creativity take control.
-                                | This is where being an Experimenter comes in. Always trying out the newest technologies that come up to see if I can improve upon it or maybe include it in my own projects, but it's mostly just to give me some ideas. I do not stop at just technology, I experiment with everything that I am able too, entrepreneurship being one of the biggest.
-                                | Considering that I am a Software Engineer and a Computer Scientist, I believe the art that we produce is in the code that we write. Programming is an art, it applies accumulated knowledge to the world, requires skill and ingenuity, and especially because it produces objects of beauty. At the end, an artist takes great pride of there work, thus making our work even better.
+	.container
+		#portfolio
+			.row
+				h1 PORTFOLIO
+				.col.l4.s6
+					.square
+				.col.l4.s6
+					.square
+				.col.l4.s6
+					.square
+				.col.l4.s6
+					.square
+				.col.l4.s6
+					.square
 
 
-    .container
-        #blog
-            .row
-                .col.l12.s12
-                    .blogArea
-                        h1 Recent Posts
-                        .blogContent
-                            .row
-                                .col.l4
-                                    .posts.post1
-                                        h3 Post Title
-                                        img(src='/img/abstract.png')
-                                        p Lorem ipsum dolor sit amet.
-                                .col.l4
-                                    .posts.post2
-                                        h3 Post Title
-                                        img(src='/img/fun.jpg')
-                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                .col.l4
-                                    .posts.post3
-                                        h3 Post Title
-                                        img(src='/img/abstract.png')
-                                        p Lorem ipsum dolor sit amet, consectetur.
+	.container
+		#about
+			.row
+				.col.l12.s12
+					.aboutMe
+						h1 ABOUT
+						.content
+							.quote
+								p "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."
+									span.author - Ralph Waldo Emerson
+							p.mystuff Hi my name is Gamaliel Barron, Gee for short and also for those who do not want to butcher my name. I am a Full Stack Engineer, and a student for life.
+								|  Puzzles and solving complicated problems are my muse. To creating the architecture all the way to user experience (UX), there is nothing better then to let your creativity take control.
+								|  This is where being an Experimenter comes in. Always trying out the newest technologies that come up to see if I can improve upon it or maybe include it in my own projects, but it's mostly just to give me some ideas. I do not stop at just technology, I experiment with everything that I am able too, entrepreneurship being one of the biggest.
+								|  Considering that I am a Software Engineer and a Computer Scientist, I believe the art that we produce is in the code that we write. Programming is an art, it applies accumulated knowledge to the world, requires skill and ingenuity, and especially because it produces objects of beauty. At the end, an artist takes great pride of there work, thus making our work even better.
+
+
+	.container
+		#blog
+			.row
+				.col.l12.s12
+					.blogArea
+						h1 Recent Posts
+						.blogContent
+							.row
+								.col.l4
+									.posts.post1
+										h3 Post Title
+										img(src='/img/abstract.png')
+										p Lorem ipsum dolor sit amet.
+								.col.l4
+									.posts.post2
+										h3 Post Title
+										img(src='/img/fun.jpg')
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								.col.l4
+									.posts.post3
+										h3 Post Title
+										img(src='/img/abstract.png')
+										p Lorem ipsum dolor sit amet, consectetur.

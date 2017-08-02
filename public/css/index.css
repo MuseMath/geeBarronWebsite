@@ -415,33 +415,51 @@ a[href="#home"]:hover {
     width: 100px;
     background-color: #dc6c44;
     border-radius: 50%;
-    margin-top: -2.3%;
-    margin-bottom: -2.5%;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
     transition: all 700ms ease-in-out;
-    z-index: 999999999;
-    left: 47%;
-    position: absolute;
-}
-
-.topCirlce h6 {
-    font-size: 250%;
-    text-align: center;
-    margin-top: 30%;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #EAEBED;
-    transition: all 500ms ease-in-out;
-    z-index: 999999999;
+    z-index: 99;
+    left: 5%;
+    top: 40%;
+    position: fixed;
+    display: none;
+    margin: auto;
+    padding: 10px;
 }
 
 .topCirlce:hover{
     background-color: #EAEBED;
+    border: 2px solid #dc6c44 ;
+    height: 220px;
+    width: 200px;
+    border-radius: 0;
+    left: 2%;
 }
 
-.topCirlce:hover h6{
+.topCirlce:hover .text{
+    padding-top: 15px;
     color: #dc6c44;
+    margin: auto;
+    position: absolute;
+    top: 1%; left: 0; bottom: 1%; right: 0;
 }
 
+.text {
+    text-align: center;
+    transition: all 500ms ease-in-out;
+    font-size: 150%;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #EAEBED;
+    z-index: 99;
+    padding-top: 20%;
+}
+
+.dropdownContent {
+    display: none;
+    text-align: center;
+    padding-top: 20%;
+    transition: all 2000ms ease-in-out;
+}
+
+.dropdownContent ul li a {
+    z-index: 999;
+}
